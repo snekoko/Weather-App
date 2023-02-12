@@ -5,7 +5,7 @@ html {
   text-align: center;
   font-family: "Raleway", sans-serif;
   background-size: 120%;
-  background: linear-gradient(-45deg, #ffc8b8, #ffa1a9, #886da0, #c16767);
+  background: linear-gradient(-45deg, #ffe3b0, #ffb8a1, #ff9292, #c16767, #886da0);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
