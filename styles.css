@@ -1,0 +1,125 @@
+body,
+html {
+  color: white;
+  height: 100%;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  background-size: 120%;
+  background: linear-gradient(-45deg, #ffc8b8, #ffa1a9, #886da0, #c16767);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+  font-variant: small-caps;
+  font-size: 40px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 20px;
+}
+
+div.container {
+  border-radius: 20px;
+}
+
+.container.box-inside {
+  width: 500px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(5px);
+  position: relative;
+  margin-top: 15px;
+  box-shadow: 1px 1px 8px rgba(119, 59, 59, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.col.city {
+  border-right: 1px solid white;
+}
+
+.bg-box {
+  padding-block: 30px;
+  padding-inline: 20px;
+  background-size: 100%;
+  background-position: top;
+  margin-block: 20px;
+  width: auto;
+}
+
+input#search-text-input {
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  width: 75%;
+  margin-bottom: 20px;
+}
+
+input:hover {
+  background-color: rgba(253, 253, 253, 0.7);
+  transition-delay: 5ms;
+}
+
+input{
+  width: 22%;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, .45);
+  padding: 10px;
+  border: 1px, black;
+  margin-bottom: 30px;
+}
+
+.container.box-outside {
+  max-width: 50px;
+  min-width: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+i {
+  font-size: 140px;
+  color: white;
+  opacity: 50%;
+}
+
+.col.weather-description {
+  color: black;
+  border-radius: 10px;
+  padding-block: 10px;
+  padding-inline: 30px;
+  background-color: rgba(255, 255, 255, .3);
+  font-size: 14px; 
+  box-shadow: 1px 1px 8px rgba(119, 59, 59, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 20px;
+}
+
+footer {
+  font-size: xx-small;
+  position: sticky;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  bottom: 0;
+  width: 100%;
+}
+
+.col.icon {
+  text-align: center;
+}
