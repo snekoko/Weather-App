@@ -38,12 +38,11 @@ function displayWeather(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("h1#city-name").innerHTML = response.data.name + `, ` + response.data.sys.country;
-  document.querySelector("#temperature").innerHTML = `${icon}` + `${temperature}°F`;
+  document.querySelector("#temperature").innerHTML = response.data.weather[0].icon + `${temperature}°F`;
   document.querySelector("#wind").innerHTML = `Wind speed: ` + Math.round(response.data.wind.speed) + ` km/h`;
   document.querySelector("#humidity").innerHTML = `Humidity: `+ Math.round(response.data.main.humidity) + `%`;
   document.querySelector("#precipitation").innerHTML = `Precipitation: `+ Math.round(response.data.main.precipitation) + `%`;
   document.querySelector("#condition").innerHTML = `Conditions: `+ response.data.weather[0].main;
-  document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
 
 }
 
