@@ -89,7 +89,7 @@ function formatDate() {
   let month = months[currentTime.getMonth()];
 
 let h2 = document.querySelector("h2");
-h2.innerHTML = `POOP It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, ${year}`;
+h2.innerHTML = `It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, ${year}`;
 
 }
 console.log(formatDate());
