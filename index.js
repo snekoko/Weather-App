@@ -39,7 +39,7 @@ function displayWeather(response) {
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("h1#city-name").innerHTML = response.data.name + `, ` + response.data.sys.country;
   document.querySelector("#temperature").innerHTML = `${temperature}°F`;
