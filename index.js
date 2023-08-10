@@ -48,7 +48,7 @@ function displayWeather(response) {
 }
 
 //Icon Toggle//
-function changeIcon
+function changeIcon(response) {
   let icon = document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
 }
 
