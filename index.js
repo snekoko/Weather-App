@@ -39,7 +39,7 @@ function displayWeather(response) {
   let icon = response.data.weather[0].icon;
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("h1#city-name").innerHTML = response.data.name + `, ` + response.data.sys.country;
-  document.querySelector("#temperature").innerHTML = ${icon} + `${temperature}°F`;
+  document.querySelector("#temperature").innerHTML = `https://openweathermap.org/img/wn/${icon}@2x.png` + `${temperature}°F`;
   document.querySelector("#wind").innerHTML = `Wind speed: ` + Math.round(response.data.wind.speed) + ` km/h`;
   document.querySelector("#humidity").innerHTML = `Humidity: `+ Math.round(response.data.main.humidity) + `%`;
   document.querySelector("#precipitation").innerHTML = `Precipitation: `+ Math.round(response.data.main.precipitation) + `%`;
