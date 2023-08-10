@@ -36,15 +36,12 @@ axios.get(apiUrl).then(displayWeather);
 function displayWeather(response) {
   infoBox.style.display = "block";
   console.log(response.data);
-  let icon = response.data.weather.icon;
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  let icon = response.data.weather[0].icon;
+  
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("h1#city-name").innerHTML = response.data.name + `, ` + response.data.sys.country;
-  document.querySelector("#temperature").innerHTML = `${icon}` + `${temperature}°F`;
+  document.querySelector("#icon").innerHTML = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+  document.querySelector("#temperature").innerHTML = `${temperature}°F`;
   document.querySelector("#wind").innerHTML = `Wind speed: ` + Math.round(response.data.wind.speed) + ` km/h`;
   document.querySelector("#humidity").innerHTML = `Humidity: `+ Math.round(response.data.main.humidity) + `%`;
   document.querySelector("#precipitation").innerHTML = `Precipitation: `+ Math.round(response.data.main.precipitation) + `%`;
