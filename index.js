@@ -44,12 +44,6 @@ function displayWeather(response) {
   document.querySelector("#precipitation").innerHTML = `Precipitation: `+ Math.round(response.data.main.precipitation) + `%`;
   document.querySelector("#condition").innerHTML = `Conditions: `+ response.data.weather[0].main;
   document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
-
-}
-
-//Icon Toggle//
-function changeIcon(response) {
-  let icon = document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
 }
 
 //Date Formating//
@@ -95,7 +89,7 @@ function formatDate() {
   let month = months[currentTime.getMonth()];
 
 let h2 = document.querySelector("h2");
-h2.innerHTML = `POOPIt is currently ${hours}:${minutes}, ${day}, ${month} ${date}, ${year}`;
+h2.innerHTML = `POOP It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, ${year}`;
 
 }
 console.log(formatDate());
