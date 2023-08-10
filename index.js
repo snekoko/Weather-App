@@ -43,12 +43,13 @@ function displayWeather(response) {
   document.querySelector("#humidity").innerHTML = `Humidity: `+ Math.round(response.data.main.humidity) + `%`;
   document.querySelector("#precipitation").innerHTML = `Precipitation: `+ Math.round(response.data.main.precipitation) + `%`;
   document.querySelector("#condition").innerHTML = `Conditions: `+ response.data.weather[0].main;
+  document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
 
 }
 
 //Icon Toggle//
-function myFunction(x) {
-  x.classList.toggle("fa-cloud-sun");
+function changeIcon
+  let icon = document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
 }
 
 //Date Formating//
