@@ -28,14 +28,27 @@
             <div class="container box-inside">
        <!-- bg container-->
         <div class="container bg-box">
+          
+          <!-- search container-->
+        <form id="search-form">
+            <input
+            type="text"
+            placeholder="Search for a city"
+            autocomplete="off"
+            autofocus="on"
+            autocapitalize="on"
+            id="search-text-input"
+          />
+            <input type="submit" value="Search" />
+          </form>
           <div class="row"><h2></h2></div>
-          <div id="weather-info-box" class="container">
-            <div class="row">
-              <div class="col city">
-              <strong><h1 id="city-name">
+          <div id="weather-info-box" class="container"><strong><h1 id="city-name">
                 <!--city name here-->
               </h1></strong>
-              
+
+            
+            <div class="row">
+              <div class="col city">
               <div id="weather-info" class="container">
                 <div class="row">
                   <div class="col weather-description">
@@ -52,29 +65,18 @@
                   </div>
                   
                 </div>
-              </div>
+              </div></div>
+              <div class="col-4 temp">
+              <img src="" id="icon" /><h1 id ="temperature"><!--temp here--></h1></div>
+
+
+              
               
               </div>
             </div>
           </div>
         
-       
-
-              <div class="col-4 temp">
-              <img src="" id="icon" /><h1 id ="temperature"><!--temp here--></h1></div> </div>
         
-        <!-- search container-->
-        <form id="search-form">
-            <input
-            type="text"
-            placeholder="Search for a city"
-            autocomplete="off"
-            autofocus="on"
-            autocapitalize="on"
-            id="search-text-input"
-          />
-            <input type="submit" value="Search" />
-          </form>
           
           <script src="index.js"></script>
       </div>
