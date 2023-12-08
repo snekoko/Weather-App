@@ -1,6 +1,6 @@
 body,
 html {
-  color: white;
+  color: #000;
   height: 100%;
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -23,15 +23,27 @@ html {
 	}
 }
 
-h1 {
+#temperature {
   font-variant: small-caps;
   font-size: 40px;
-  padding: 10px;
+  padding: 2px;
+  text-align: right;
+  color: black;
+}
+
+h1 {
+  font-variant: small-caps;
+  font-size: 32px;
+  padding: 5px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
 }
 
 h2 {
   font-size: 20px;
-  padding: 20px;
+  padding: 5px;
+  text-align: center;
 }
 
 div.container {
@@ -43,13 +55,10 @@ div.container {
   background-color: rgba(255, 255, 255, .2);
   backdrop-filter: blur(5px);
   position: relative;
-  margin-top: 15px;
+  margin-top: 10px;
   box-shadow: 1px 1px 8px rgba(119, 59, 59, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.4);
-}
 
-.col.city {
-  border-right: 1px solid white;
 }
 
 .bg-box {
@@ -69,6 +78,11 @@ input#search-text-input {
   margin-bottom: 20px;
 }
 
+.search-form-button {
+  background: #000;
+  color: #fff;
+}
+
 input:hover {
   background-color: rgba(253, 253, 253, 0.7);
   transition-delay: 5ms;
@@ -79,7 +93,6 @@ input{
   border-radius: 10px;
   background-color: rgba(255, 255, 255, .45);
   padding: 5px;
-  border: 1px, black;
   margin-bottom: 20px;
 }
 
@@ -92,22 +105,19 @@ input{
   transform: translate(-50%, -50%);  
 }
 
-i {
-  font-size: 140px;
-  color: white;
-  opacity: 50%;
+img#icon {
+  width: 100px;
 }
 
 .col.weather-description {
   color: black;
   border-radius: 10px;
   padding-block: 10px;
-  padding-inline: 30px;
+  padding-inline: 20px;
   background-color: rgba(255, 255, 255, .3);
   font-size: 14px; 
   box-shadow: 1px 1px 8px rgba(119, 59, 59, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  margin: 10px;
 }
 
 footer {
@@ -118,8 +128,4 @@ footer {
   color: black;
   bottom: 0;
   width: 100%;
-}
-
-.col.icon {
-  text-align: center;
 }
