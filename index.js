@@ -97,15 +97,23 @@ h2.innerHTML = `It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, $
 }
 console.log(formatDate());
 
-
+// shifting color background based in time
 const body = document.querySelector('body');
 const date = new Date();
 const hour = date.getHours();
 
-if (hour >= 6 && currentHour < 12) {
-  body.style.backgroundColor = 'lightblue';
-} else if (hour >= 12 && currentHour < 18) {
-  body.style.backgroundColor = '#ff9292';
+if (hour >= 6 && currentHour < 9) {
+  body.style.backgroundColor = 'ffc98e';
+} else if (hour >= 9 && currentHour < 12) {
+  body.style.backgroundColor = '#b9ecf7';
+} else if (hour >= 12 && currentHour < 15) {
+  body.style.backgroundColor = '#e3c6c7';
+} else if (hour >= 15 && currentHour < 18) {
+  body.style.backgroundColor = '#ffe1d9';
+} else if (hour >= 18 && currentHour < 21) {
+  body.style.backgroundColor = '#ffb4ab';
+} else if (hour >= 21 && currentHour < 24) {
+  body.style.backgroundColor = '#cda3be';
 } else {
-  body.style.backgroundColor = '#886da0';
+  body.style.backgroundColor = '#475575';
 }
