@@ -2,7 +2,6 @@ body,
 html {
   color: #000;
   height: 100%;
-  text-align: center;
   font-family: "Raleway", sans-serif;
   background-size: 120%;
   background: linear-gradient(-45deg, rgba(255, 213, 213, 0.502), #ffffff50, #ff9db180);
@@ -26,7 +25,6 @@ html {
 #temperature {
   font-variant: small-caps;
   font-size: 35px;
-  padding: 2px;
   text-align: right;
   color: black;
 }
@@ -40,12 +38,12 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
 }
 
 .container.floating-box{
-  width: 500px;
+  width: 450px;
   background-color: rgba(255, 255, 255, .35);
   backdrop-filter: blur(5px);
   box-shadow: 1px 1px 8px rgba(119, 59, 59, 0.25);
@@ -60,8 +58,8 @@ h2 {
 
 .contents-wrapper {
   margin-block: 20px;
-  width: auto;
-  background-color: pink;
+  padding: 15px;
+
 }
 
 input#search-text-input {
@@ -96,14 +94,14 @@ input{
 img#icon {
   width: 100px;
   position:absolute;
-  right: 25px;
+  right: 15px;
 }
 
 .col.weather-description {
   color: black;
   border-radius: 10px;
   padding-block: 10px;
-  padding-inline: 20px;
+  padding-inline: 30px;
   background-color: rgba(255, 255, 255, .3);
   font-size: 15px; 
   box-shadow: 1px 1px 8px rgba(119, 59, 59, 0.25);
