@@ -102,17 +102,17 @@ const body = document.querySelector('body');
 const date = new Date();
 const hour = date.getHours();
 
-if (hour >= 6 && currentHour < 9) {
-  body.style.backgroundColor = 'ffc98e';
-} else if (hour >= 9 && currentHour < 12) {
+if (hour >= 6 && hour < 9) {
+  body.style.backgroundColor = '#ffc98e';
+} else if (hour >= 9 && hour < 12) {
   body.style.backgroundColor = '#b9ecf7';
-} else if (hour >= 12 && currentHour < 15) {
+} else if (hour >= 12 && hour < 15) {
   body.style.backgroundColor = '#e3c6c7';
-} else if (hour >= 15 && currentHour < 18) {
+} else if (hour >= 15 && hour < 18) {
   body.style.backgroundColor = '#ffe1d9';
-} else if (hour >= 18 && currentHour < 21) {
+} else if (hour >= 18 && hour < 21) {
   body.style.backgroundColor = '#ffb4ab';
-} else if (hour >= 21 && currentHour < 24) {
+} else if (hour >= 21 && hour < 24) {
   body.style.backgroundColor = '#cda3be';
 } else {
   body.style.backgroundColor = '#475575';

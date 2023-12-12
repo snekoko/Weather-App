@@ -27,14 +27,16 @@ html {
   font-size: 35px;
   text-align: right;
   color: black;
+  font-weight: bolder;
+  margin-block: 10px;
 }
 
-h1 {
+#city-name {
   font-variant: small-caps;
   font-size: 30px;
   font-weight: bold;
   color: black;
-  text-align: left;
+  margin-block: 10px;
 }
 
 h2 {
@@ -94,7 +96,7 @@ input{
 img#icon {
   width: 100px;
   position:absolute;
-  right: 15px;
+  right: 25px;
 }
 
 .col.weather-description {
@@ -116,6 +118,7 @@ footer {
   color: black;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
 
 .weather-forecast-date {
