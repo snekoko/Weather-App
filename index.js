@@ -46,7 +46,6 @@ function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = `${temperature}°F`;
   document.querySelector("#wind").innerHTML = `Wind speed: ` + Math.round(response.data.wind.speed) + ` km/h`;
   document.querySelector("#humidity").innerHTML = `Humidity: `+ Math.round(response.data.main.humidity) + `%`;
-  document.querySelector("#precipitation").innerHTML = `Precipitation: `+ Math.round(response.data.main.precipitation) + `%`;
   document.querySelector("#condition").innerHTML = `Conditions: `+ response.data.weather[0].main;
 }
 
