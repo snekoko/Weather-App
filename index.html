@@ -25,7 +25,7 @@
 <body>
   <div class="container floating-box"><!-- floating box container--> 
       <div class="container contents-wrapper"><!-- overall container-->
-        <form id="search-form">
+        <form id="search-form" class="search-form">
             <input
             type="text"
             placeholder="Search for a city"
@@ -55,7 +55,7 @@
               </div>
             </div>
               
-            <div class="col-4 temp">
+            <div class="col-3 temp">
               <div class="row">
                 <h1 id ="temperature"><!--temp here--></h1>
               </div>
@@ -67,19 +67,9 @@
           </div>
         </div>
           
-          <div class="weather-forecast">
-            <div class="row">
-            <div class="col-2">
-              <div class="weather-forecast-date">Day 1</div>
-                <img src="http://openweathermap.org/img/wn/50n@2x.png" alt="" width="60px" /> 
-                
-              <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-min"></span>10 
-                <span class="weather-forecast-temperature-max">20</span>
-              </div>
-            </div>
-          </div>
-          </div>
+        <div id="weather-forecast-container" class="container">            
+          <div class="row weather-forecast" id="forecast"></div>
+        </div>
 
 
     </div>

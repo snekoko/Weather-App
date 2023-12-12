@@ -95,7 +95,6 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = `It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, ${year}`;
 
 }
-console.log(formatDate());
 
 // shifting color background based in time
 const body = document.querySelector('body');
@@ -117,3 +116,29 @@ if (hour >= 6 && hour < 9) {
 } else {
   body.style.backgroundColor = '#475575';
 }
+
+
+//forecast
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="col" "weather-forecast-day">
+        <div class="row-12 weather-forecast-date">${day}</div>
+        <div class="row-12 weather-forecast-icon">☂️</div>
+        <div class="row weather-forecast-temperatures">
+          <div class="col-6 weather-forecast-temperature-max">15</div>
+          <div class="col-6 weather-forecast-temperature-min">9</div>
+        </div>
+      </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();

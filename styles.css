@@ -24,7 +24,7 @@ html {
 
 #temperature {
   font-variant: small-caps;
-  font-size: 35px;
+  font-size: 28px;
   text-align: right;
   color: black;
   font-weight: bolder;
@@ -66,9 +66,9 @@ h2 {
 
 input#search-text-input {
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.35);
   padding: 5px;
-  width: 75%;
+  width: 100%;
   margin-bottom: 20px;
   border: none;
 }
@@ -77,6 +77,10 @@ input#search-text-input {
   background: #000;
   color: #fff;
   border: none;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  right: 25px; 
 }
 
 input:hover {
@@ -85,18 +89,10 @@ input:hover {
   color: #000;
 }
 
-input{
-  width: 22%;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, .45);
-  padding: 5px;
-  margin-bottom: 20px;
-}
-
 img#icon {
   width: 100px;
   position:absolute;
-  right: 25px;
+  right: 15px;
 }
 
 .col.weather-description {
@@ -121,18 +117,21 @@ footer {
   text-align: center;
 }
 
-.weather-forecast-date {
+
+#weather-forecast-container {
   margin-top: 20px;
+  background-color: rgb(255, 224, 229);
   text-align: center;
-  font-weight: bolder;
-  opacity: 0.5;
+  font-size: 14px;
 }
 
-.weather-forecast-temperature-min {
-  font-weight: lighter;
-  opacity: 0.5
+.weather-forecast-date {
+  font-weight: bold;
 }
-
 .weather-forecast-temperature-max {
-  font-weight: bolder;
+  font-weight: bold;
+}
+
+.weather-forecast-icon {
+  font-size: 30px;
 }
