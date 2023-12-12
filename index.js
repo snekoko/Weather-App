@@ -129,7 +129,7 @@ function displayForecast() {
       `
       <div class="col" "weather-forecast-day">
         <div class="row-12 weather-forecast-date">${day}</div>
-        <div class="row-12 weather-forecast-icon">☂️</div>
+        <div class="row-12 weather-forecast-icon"><img src="http://openweathermap.org/img/wn/50n@2x.png" alt="" width="60px"></div>
         <div class="row weather-forecast-temperatures">
           <div class="col-6 weather-forecast-temperature-max">15</div>
           <div class="col-6 weather-forecast-temperature-min">9</div>
