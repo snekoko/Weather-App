@@ -97,3 +97,15 @@ h2.innerHTML = `It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, $
 }
 console.log(formatDate());
 
+
+const body = document.querySelector('body');
+const date = new Date();
+const hour = date.getHours();
+
+if (hour >= 6 && currentHour < 12) {
+  body.style.backgroundColor = 'lightblue';
+} else if (hour >= 12 && currentHour < 18) {
+  body.style.backgroundColor = '#ff9292';
+} else {
+  body.style.backgroundColor = '#886da0';
+}
