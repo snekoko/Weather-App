@@ -25,7 +25,7 @@ html {
 
 #temperature {
   font-variant: small-caps;
-  font-size: 40px;
+  font-size: 35px;
   padding: 2px;
   text-align: right;
   color: black;
@@ -33,7 +33,7 @@ html {
 
 h1 {
   font-variant: small-caps;
-  font-size: 32px;
+  font-size: 30px;
   padding: 5px;
   font-weight: bold;
   color: black;
