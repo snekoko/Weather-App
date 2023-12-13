@@ -29,7 +29,7 @@ function search(event) {
   let units = "imperial";
   let apiKey = "0dc40d3d7cda209ca40e77430c74cf57";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
+  console.log(apiURL);
 axios.get(apiUrl).then(displayWeather);
 } 
 
@@ -47,6 +47,8 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = `Wind speed: ` + Math.round(response.data.wind.speed) + ` km/h`;
   document.querySelector("#humidity").innerHTML = `Humidity: `+ Math.round(response.data.main.humidity) + `%`;
   document.querySelector("#condition").innerHTML = `Conditions: `+ response.data.weather[0].main;
+
+  getForecast(response.data.name);
 }
 
 //Date Formating//
@@ -93,10 +95,10 @@ function formatDate() {
 
 let h2 = document.querySelector("h2");
 h2.innerHTML = `It is currently ${hours}:${minutes}, ${day}, ${month} ${date}, ${year}`;
-
 }
+console.log(formatDate());
 
-// shifting color background based in time
+// shifting color background based on time
 const body = document.querySelector('body');
 const date = new Date();
 const hour = date.getHours();
@@ -117,25 +119,36 @@ if (hour >= 6 && hour < 9) {
   body.style.backgroundColor = '#475575';
 }
 
+function getForecast(city) {
+  let units = "imperial";
+  let apiKey = "c83c0f0o78d57f28ecb513a495bb0et1"
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${units}`
+  axios.get(apiURL).then(displayForecast);
+}
+
 
 //forecast
-function displayForecast() {
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastHtml = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
     forecastHtml =
       forecastHtml +
       `
       <div class="col" "weather-forecast-day">
-        <div class="row-12 weather-forecast-date">${day}</div>
-        <div class="row-12 weather-forecast-icon"><img src="http://openweathermap.org/img/wn/50n@2x.png" alt="" width="60px"></div>
+        <div class="row-12 weather-forecast-date">DAY</div>
+        <div class="row-12 weather-forecast-icon">
+        <img src="${day.condition.icon_url}" class="weather-forecast-icon" /></div>
         <div class="row weather-forecast-temperatures">
-          <div class="col-6 weather-forecast-temperature-max">15</div>
-          <div class="col-6 weather-forecast-temperature-min">9</div>
+          <div class="col-6 weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</div>
+          <div class="col-6 weather-forecast-temperature-min">${Math.round(day.temperature.minimum)}</div>
         </div>
       </div>
     `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
