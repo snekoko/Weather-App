@@ -29,7 +29,7 @@ function search(event) {
   let units = "imperial";
   let apiKey = "0dc40d3d7cda209ca40e77430c74cf57";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  console.log(apiURL);
+  console.log(apiUrl);
 axios.get(apiUrl).then(displayWeather);
 } 
 
