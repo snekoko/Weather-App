@@ -4,7 +4,7 @@ html {
   height: 100%;
   font-family: "Raleway", sans-serif;
   background-size: 120%;
-  background: linear-gradient(-45deg, rgba(255, 213, 213, 0.502), #ffffff50, #ff9db180);
+  background: linear-gradient(-45deg, rgba(255, 240, 199, 0.5), #ffffff50, #a776b5a2);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
@@ -108,7 +108,7 @@ img#icon {
 }
 
 footer {
-  font-size: x-small;
+  font-size: small;
   position: sticky;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
