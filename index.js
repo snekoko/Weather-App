@@ -111,16 +111,18 @@ const body = document.querySelector('body');
 const date = new Date();
 const hour = date.getHours();
 
-if (hour >= 6 && hour < 9) {
+if (hour >= 3 && hour < 6) {
+  body.style.backgroundColor = '#d5a88a';
+} else if (hour >= 6 && hour < 9) {
   body.style.backgroundColor = '#ffc98e';
 } else if (hour >= 9 && hour < 12) {
-  body.style.backgroundColor = '#b9ecf7';
+  body.style.backgroundColor = '#ffd899';
 } else if (hour >= 12 && hour < 15) {
-  body.style.backgroundColor = '#e3c6c7';
+  body.style.backgroundColor = '#d0f3f2';
 } else if (hour >= 15 && hour < 18) {
-  body.style.backgroundColor = '#ffe1d9';
+  body.style.backgroundColor = '#ffc8ab';
 } else if (hour >= 18 && hour < 21) {
-  body.style.backgroundColor = '#ffb4ab';
+  body.style.backgroundColor = '#cda3be';
 } else if (hour >= 21 && hour < 24) {
   body.style.backgroundColor = '#cda3be';
 } else {
@@ -151,8 +153,8 @@ function displayForecast(response) {
         <div class="row-12 weather-forecast-icon">
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" /></div>
         <div class="row weather-forecast-temperatures">
-          <div class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</div>
-          <div class="weather-forecast-temperature-min">${Math.round(day.temperature.minimum)}</div>
+          <div class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}°F</div>
+          <div class="weather-forecast-temperature-min">${Math.round(day.temperature.minimum)}°F</div>
         </div>
       </div>
     `;
