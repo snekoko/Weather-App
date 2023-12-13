@@ -51,6 +51,14 @@ function displayWeather(response) {
   getForecast(response.data.name);
 }
 
+//day of week formatting
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 //Date Formating//
 function formatDate() {
   let currentTime = new Date();
@@ -139,12 +147,12 @@ function displayForecast(response) {
       forecastHtml +
       `
       <div class="col" "weather-forecast-day">
-        <div class="row-12 weather-forecast-date">DAY</div>
+        <div class="row-12 weather-forecast-date">${formatDay(day.time)}</div>
         <div class="row-12 weather-forecast-icon">
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" /></div>
         <div class="row weather-forecast-temperatures">
-          <div class="col-6 weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</div>
-          <div class="col-6 weather-forecast-temperature-min">${Math.round(day.temperature.minimum)}</div>
+          <div class="weather-forecast-temperature-max">${Math.round(day.temperature.maximum)}</div>
+          <div class="weather-forecast-temperature-min">${Math.round(day.temperature.minimum)}</div>
         </div>
       </div>
     `;
